@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pay Per Add to Cart Advertising for CPG | GenesisX</title>
+<meta name="description" content="Retail creative and shoppable stories for CPG brands. Pay only when shoppers add to cart, not for impressions or clicks. Book a demo.">
+<meta name="robots" content="noindex, nofollow">
+<!-- TODO: confirm final domain and path before launch -->
+<link rel="canonical" href="https://www.genesisx.com/pay-per-cart/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pay Per Add to Cart Advertising for CPG | GenesisX">
+<meta property="og:description" content="Retail creative and shoppable stories for CPG brands. Pay only when shoppers add to cart, not for impressions or clicks. Book a demo.">
+<meta property="og:url" content="https://www.genesisx.com/pay-per-cart/">
+<!-- TODO: add a 1200x630 share image and set its absolute URL here -->
+<meta property="og:image" content="https://www.genesisx.com/pay-per-cart/assets/og-image.png">
+<meta name="theme-color" content="#000000">
+<script>document.documentElement.classList.add('js');</script>
+
+<style>
+/* ==========================================================================
+   GenesisX | Page A: Pay Per Cart
+   Brand tokens taken from genesisx.com (black, white, purple #7437f6).
+   TODO: if this page is hosted on genesisx.com, swap the system font stack
+   for the site's own Groupe (headings) and SF Pro Display (body) files.
+   ========================================================================== */
+:root {
+  --black: #000;
+  --ink: #fff;
+  --muted: rgba(255, 255, 255, .74);
+  --purple: #7437f6;
+  --purple-dark: #6226e0;
+  --lilac: #b79cff;
+  --light: #f6f5fb;
+  --text: #111116;
+  --text-muted: #4a4a58;
+  --line: #deddea;
+  --radius: 20px;
+  --font: "Helvetica Neue", Helvetica, Arial, "Segoe UI", system-ui, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  color: var(--text);
+  background: var(--black);
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; }
+h1, h2, h3, p, ul { margin: 0; }
+ul { padding: 0; list-style: none; }
+
+.wrap { width: 100%; max-width: 1120px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left)); padding-right: max(20px, env(safe-area-inset-right)); }
+.skip {
+  position: absolute; left: 12px; top: -60px; z-index: 100;
+  background: #fff; color: #000; padding: 10px 16px; border-radius: 8px; font-weight: 700;
+}
+.skip:focus { top: 12px; }
+
+/* Focus */
+:focus-visible { outline: 3px solid var(--lilac); outline-offset: 3px; }
+.light :focus-visible, .form-card :focus-visible { outline-color: #5a1fd6; }
+
+/* Sections */
+section { padding: clamp(56px, 8vw, 104px) 0; scroll-margin-top: 64px; }
+.dark { background: var(--black); color: var(--ink); }
+.dark-2 { background: #0b0b10; color: var(--ink); }
+.light { background: var(--light); color: var(--text); }
+.white { background: #fff; color: var(--text); }
+
+.eyebrow {
+  font-size: .8125rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--purple); margin-bottom: 14px;
+}
+.dark .eyebrow, .dark-2 .eyebrow { color: var(--lilac); }
+h2 {
+  font-size: clamp(1.9rem, 4.6vw, 3rem); line-height: 1.06; letter-spacing: -.02em; font-weight: 800;
+  max-width: 20ch; text-wrap: balance;
+}
+.lede { margin-top: 18px; max-width: 58ch; font-size: 1.1875rem; color: var(--text-muted); }
+.dark .lede, .dark-2 .lede { color: var(--muted); }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 52px; padding: 0 30px; border-radius: 999px; border: 0; cursor: pointer;
+  background: var(--purple); color: #fff; font: inherit; font-weight: 700; font-size: 1.0625rem; text-decoration: none;
+  transition: background-color .15s ease;
+}
+.btn:hover { background: var(--purple-dark); }
+.btn:disabled { opacity: .65; cursor: progress; }
+.btn-sm { min-height: 42px; padding: 0 22px; font-size: .9375rem; }
+.btn-block { width: 100%; }
+.link-arrow { display: inline-flex; align-items: center; min-height: 44px; color: var(--ink); font-weight: 600; text-underline-offset: 4px; }
+
+/* Header */
+.site-header { position: sticky; top: 0; z-index: 40; background: rgba(0, 0, 0, .9); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(255, 255, 255, .12); }
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+.logo { display: block; line-height: 0; }
+.logo img { height: 20px; width: auto; filter: invert(1); } /* black PNG shown as white on dark */
+
+/* Hero */
+.hero {
+  position: relative; overflow: hidden; color: var(--ink); padding-top: clamp(40px, 7vw, 88px); padding-bottom: clamp(40px, 6vw, 72px);
+  background: var(--black);
+}
+.hero::before {
+  content: ""; position: absolute; inset: -10%; pointer-events: none;
+  background: radial-gradient(55% 60% at 82% 35%, rgba(116, 55, 246, .38), transparent 70%);
+}
+.hero .wrap { position: relative; }
+.hero-grid { display: grid; gap: 44px; align-items: center; }
+.hero h1 {
+  font-size: clamp(2.9rem, 9.5vw, 6.25rem); line-height: .94; letter-spacing: -.035em; font-weight: 800; margin: 0;
+}
+.hero h1 span { display: block; color: var(--purple); }
+.hero .eyebrow { color: var(--lilac); }
+.hero .sub { margin-top: 24px; max-width: 34em; font-size: clamp(1.1rem, 2.4vw, 1.3rem); color: var(--muted); }
+.hero-cta { margin-top: 32px; display: flex; flex-wrap: wrap; align-items: center; gap: 18px 28px; }
+.hero .assure { margin-top: 18px; font-size: .9375rem; color: var(--muted); }
+
+/* Phone mockup */
+.mock { margin: 0 auto; text-align: center; }
+.phone {
+  width: 252px; margin: 0 auto; padding: 9px; border-radius: 40px; background: #17171c;
+  border: 1px solid rgba(255, 255, 255, .22); box-shadow: 0 30px 70px rgba(116, 55, 246, .35);
+}
+.screen { background: #fff; color: #15151b; border-radius: 31px; overflow: hidden; text-align: left; min-height: 440px; display: flex; flex-direction: column; }
+.screen-top { padding: 18px 16px 12px; font-weight: 800; font-size: .9375rem; border-bottom: 1px solid #ececf3; display: flex; justify-content: space-between; align-items: center; }
+.screen-top small { font-weight: 600; color: #55556a; font-size: .6875rem; letter-spacing: .08em; text-transform: uppercase; }
+.screen-video { margin: 14px 14px 0; border-radius: 12px; aspect-ratio: 16 / 10; background: linear-gradient(135deg, #e7e1fb, #cfc3f7); display: grid; place-items: center; }
+.play { width: 44px; height: 44px; border-radius: 50%; background: #15151b; display: grid; place-items: center; }
+.play::after { content: ""; border-style: solid; border-width: 7px 0 7px 12px; border-color: transparent transparent transparent #fff; margin-left: 3px; }
+.screen-chips { display: flex; gap: 6px; padding: 14px 14px 0; flex-wrap: wrap; }
+.screen-chips span { font-size: .75rem; font-weight: 700; padding: 6px 11px; border-radius: 999px; background: #f0edfc; color: #4a22b8; }
+.screen-lines { padding: 14px 14px 0; display: grid; gap: 8px; }
+.screen-lines i { display: block; height: 9px; border-radius: 5px; background: #e9e9f1; }
+.screen-lines i:nth-child(2) { width: 82%; } .screen-lines i:nth-child(3) { width: 58%; }
+.screen-cta { margin: auto 14px 16px; padding: 14px 10px; text-align: center; border-radius: 12px; background: #15151b; color: #fff; font-weight: 700; font-size: .875rem; }
+.tag-mock { display: inline-block; margin-top: 16px; padding: 4px 12px; border: 1px solid rgba(255, 255, 255, .35); border-radius: 999px; font-size: .75rem; font-weight: 700; letter-spacing: .14em; color: #e6dcff; }
+
+/* Pricing strip in hero */
+.strip { margin-top: clamp(36px, 5vw, 64px); display: grid; gap: 1px; background: rgba(255, 255, 255, .16); border: 1px solid rgba(255, 255, 255, .16); border-radius: var(--radius); overflow: hidden; }
+.strip li { background: #08080c; padding: 18px 22px; display: flex; align-items: center; justify-content: space-between; gap: 14px; font-weight: 600; }
+.badge { flex: none; font-size: .75rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; padding: 6px 12px; border-radius: 999px; }
+.badge.free { border: 1px solid rgba(255, 255, 255, .4); color: #e8e8f0; }
+.badge.pay { background: var(--purple); color: #fff; }
+.strip li:last-child { background: #1a0f3a; }
+
+/* Problem */
+.problem .lines { margin-top: 28px; display: grid; gap: 16px; max-width: 60ch; font-size: 1.1875rem; color: var(--muted); }
+.problem .lines p:first-child { color: #fff; font-size: clamp(1.3rem, 3vw, 1.75rem); line-height: 1.3; font-weight: 600; }
+
+/* How it works */
+.steps { margin-top: 44px; display: grid; gap: 18px; counter-reset: step; }
+.step { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; display: flex; flex-direction: column; gap: 12px; }
+.step .num { font-weight: 800; font-size: .875rem; color: var(--purple); letter-spacing: .1em; }
+.step h3 { font-size: 1.3125rem; line-height: 1.2; letter-spacing: -.01em; }
+.step p { color: var(--text-muted); }
+.step .badge { align-self: flex-start; margin-top: auto; }
+.step .badge.free { border-color: #b8b6cc; color: #3a3a4a; }
+.step.is-pay { border-color: var(--purple); box-shadow: 0 0 0 2px var(--purple) inset; }
+.note { margin-top: 24px; font-size: .9375rem; color: var(--text-muted); }
+
+/* What you get */
+.features { margin-top: 44px; display: grid; gap: 0 48px; }
+.features li { display: grid; grid-template-columns: 28px 1fr; gap: 14px; padding: 20px 0; border-top: 1px solid var(--line); }
+.features .tick { width: 24px; height: 24px; border-radius: 50%; background: var(--purple); position: relative; margin-top: 2px; }
+.features .tick::after { content: ""; position: absolute; left: 8px; top: 5px; width: 6px; height: 11px; border: solid #fff; border-width: 0 2.5px 2.5px 0; transform: rotate(45deg); }
+.features h3 { font-size: 1.125rem; line-height: 1.3; }
+.features p { color: var(--text-muted); margin-top: 4px; }
+
+/* Proof (swappable: see body data-proof and data-retailers) */
+.stats { margin-top: 44px; display: grid; gap: 18px; }
+.stat { border: 1px solid rgba(255, 255, 255, .18); border-radius: var(--radius); padding: 28px; }
+.stat b { display: block; font-size: clamp(2.6rem, 7vw, 4rem); line-height: 1; letter-spacing: -.03em; color: #fff; }
+.stat span { display: block; margin-top: 10px; color: var(--muted); }
+.quals { margin-top: 28px; display: grid; gap: 14px; }
+.quals li { padding: 18px 22px; border-left: 3px solid var(--purple); background: rgba(255, 255, 255, .05); border-radius: 0 12px 12px 0; color: #ececf4; }
+.cases { margin-top: 18px; display: grid; gap: 18px; }
+.case { border: 1px solid rgba(255, 255, 255, .18); border-radius: var(--radius); padding: 28px; }
+.case b { display: block; font-size: clamp(2rem, 5vw, 2.75rem); letter-spacing: -.02em; line-height: 1.05; }
+.case h3 { font-size: 1.0625rem; margin-top: 12px; }
+.case p { color: var(--muted); margin-top: 4px; }
+body[data-proof="none"] .proof-stats, body[data-proof="none"] .proof-cases { display: none; }
+body[data-proof="stats"] .proof-cases { display: none; }
+body[data-retailers="off"] .r-on { display: none; }
+body[data-retailers="on"] .r-off { display: none; }
+
+/* Who it's for */
+.for-grid { margin-top: 36px; display: grid; gap: 18px; }
+.for-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; }
+.for-card h3 { font-size: 1.25rem; margin-bottom: 8px; }
+.for-card p { color: var(--text-muted); }
+
+/* FAQ */
+.faq { margin-top: 36px; max-width: 820px; border-bottom: 1px solid var(--line); }
+.faq details { border-top: 1px solid var(--line); }
+.faq summary { cursor: pointer; list-style: none; padding: 22px 40px 22px 0; font-weight: 700; font-size: 1.125rem; position: relative; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; position: absolute; right: 6px; top: 50%; transform: translateY(-50%); font-size: 1.75rem; font-weight: 400; color: var(--purple); }
+.faq details[open] summary::after { content: "\2212"; }
+.faq .answer { padding: 0 40px 24px 0; color: var(--text-muted); max-width: 64ch; }
+
+/* Final CTA + form */
+.cta-grid { display: grid; gap: 40px; align-items: start; }
+.cta h2 { max-width: 14ch; }
+.cta .contact { margin-top: 28px; color: var(--muted); font-size: .9375rem; }
+.cta .contact a { color: #fff; }
+.form-card { background: #fff; color: var(--text); border-radius: 24px; padding: clamp(22px, 4vw, 34px); }
+.form-card h3 { font-size: 1.375rem; letter-spacing: -.01em; margin-bottom: 18px; }
+.row { display: grid; gap: 0 14px; }
+.field { margin-bottom: 16px; }
+label, legend { display: block; font-size: .875rem; font-weight: 700; margin-bottom: 6px; padding: 0; }
+.opt { font-weight: 500; color: var(--text-muted); }
+input[type="text"], input[type="email"], textarea {
+  width: 100%; min-height: 50px; padding: 12px 14px; font: inherit; font-size: 1rem; color: var(--text);
+  background: #fff; border: 1.5px solid #b9b8cc; border-radius: 12px;
+}
+textarea { min-height: 96px; resize: vertical; }
+input:hover, textarea:hover { border-color: #85839f; }
+input:focus-visible, textarea:focus-visible { outline: 3px solid #5a1fd6; outline-offset: 1px; border-color: #5a1fd6; }
+input[aria-invalid="true"] { border-color: #b3261e; }
+.err { color: #b3261e; font-size: .875rem; margin-top: 6px; font-weight: 600; }
+.warn { color: #7a4b00; font-size: .875rem; margin-top: 6px; }
+fieldset { border: 0; padding: 0; margin: 0 0 16px; min-width: 0; }
+.checks { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 12px; }
+.checks label { display: flex; align-items: center; gap: 10px; min-height: 44px; margin: 0; font-weight: 500; cursor: pointer; }
+.checks input { width: 20px; height: 20px; accent-color: var(--purple); flex: none; }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.fine { margin-top: 14px; font-size: .8125rem; color: var(--text-muted); }
+.fine a { color: var(--text); }
+.form-error { margin-top: 14px; padding: 12px 14px; border-radius: 10px; background: #fdeceb; color: #8c1d18; font-weight: 600; font-size: .9375rem; }
+.success { text-align: center; padding: 24px 6px; }
+.success h3 { font-size: 1.75rem; margin-bottom: 10px; }
+.success p { color: var(--text-muted); }
+.success:focus { outline: none; }
+
+/* TODO markers: visible on purpose, replace before launch */
+.todo { display: inline-block; background: #fff3b0; color: #3a2f00; border: 1px dashed #b38f00; padding: 2px 8px; border-radius: 6px; font-size: .85em; font-weight: 700; line-height: 1.4; }
+
+/* Footer */
+.site-footer { background: #000; color: var(--muted); padding: 36px 0 44px; font-size: .9375rem; border-top: 1px solid rgba(255, 255, 255, .12); }
+.site-footer .wrap { display: flex; flex-wrap: wrap; gap: 12px 28px; justify-content: space-between; }
+.site-footer a { color: #fff; }
+
+/* Sticky mobile CTA */
+.sticky { position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; display: none; padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); background: rgba(0, 0, 0, .94); border-top: 1px solid rgba(255, 255, 255, .16); transition: transform .2s ease; }
+.sticky.is-hidden { transform: translateY(100%); visibility: hidden; }
+
+/* Mobile refinements */
+a, button, summary, label { -webkit-tap-highlight-color: rgba(116, 55, 246, .25); }
+.btn, summary, .link-arrow, .intents a { touch-action: manipulation; }
+@media (min-width: 360px) { .row.names { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 639px) {
+  body { font-size: 1rem; }
+  section { scroll-margin-top: 56px; }
+  .site-header .wrap { height: 56px; }
+  .logo img { height: 18px; }
+  .hero { padding-top: 28px; }
+  .hero .eyebrow { font-size: .75rem; letter-spacing: .1em; margin-bottom: 12px; }
+  .hero .sub { margin-top: 18px; }
+  .hero-cta { margin-top: 24px; gap: 4px 20px; }
+  .hero-cta .btn { flex: 1 1 100%; }
+  .hero .assure { margin-top: 12px; }
+  .lede { font-size: 1.0625rem; }
+  .step, .stat, .case, .for-card, .moment { padding: 22px; }
+  .features li { padding: 16px 0; }
+  .strip li { padding: 16px 18px; }
+  .phone { width: 228px; }
+  .screen { min-height: 400px; }
+  .faq summary { padding: 18px 36px 18px 0; font-size: 1.0625rem; }
+  .form-card { border-radius: 20px; }
+}
+
+/* Motion. All of it is skipped when the visitor prefers reduced motion. */
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+  @keyframes float { 50% { transform: translateY(-10px); } }
+  @keyframes drift { 50% { transform: translate(-3%, 4%) scale(1.08); } }
+  @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(21, 21, 27, .4); } 70%, 100% { box-shadow: 0 0 0 14px rgba(21, 21, 27, 0); } }
+  @keyframes payglow { 0% { box-shadow: 0 0 0 2px var(--purple) inset, 0 0 0 0 rgba(116, 55, 246, .5); } 100% { box-shadow: 0 0 0 2px var(--purple) inset, 0 0 0 22px rgba(116, 55, 246, 0); } }
+
+  /* Hero entrance. The H1 stays static so the first paint is never delayed. */
+  .hero .sub, .hero-cta, .hero .assure, .intents { animation: rise .7s cubic-bezier(.2, .7, .2, 1) both; }
+  .hero .sub { animation-delay: .1s; }
+  .hero-cta { animation-delay: .2s; }
+  .hero .assure, .intents { animation-delay: .3s; }
+  .hero .mock { animation: rise .9s cubic-bezier(.2, .7, .2, 1) .2s both; }
+  .hero .phone { animation: float 6s ease-in-out 1.2s infinite; }
+  .hero::before { animation: drift 14s ease-in-out infinite; }
+  .play { animation: pulse 2.4s ease-out infinite; }
+
+  /* Scroll reveal. Classes are added by script, only to elements below the fold. */
+  .js .reveal {
+    opacity: 0; transform: translateY(28px);
+    transition: opacity .7s cubic-bezier(.2, .7, .2, 1), transform .7s cubic-bezier(.2, .7, .2, 1);
+    transition-delay: var(--d, 0s);
+  }
+  .js .reveal.in { opacity: 1; transform: none; }
+  @media (max-width: 639px) { .js .reveal { transform: translateY(16px); transition-duration: .5s; } .js .reveal.in { transform: none; } }
+  .step.is-pay.in { animation: payglow 1.8s ease-out .7s 1; }
+
+  /* Micro-interactions */
+  .btn { transition: background-color .15s ease, transform .15s ease, box-shadow .2s ease; }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 26px rgba(116, 55, 246, .4); }
+  .btn:active { transform: none; box-shadow: none; }
+  .faq details[open] .answer { animation: rise .35s ease both; }
+  .faq summary::after { transition: transform .2s ease; }
+}
+
+/* Larger screens */
+@media (min-width: 640px) {
+  .strip { grid-template-columns: repeat(3, 1fr); }
+  .strip li { flex-direction: column; align-items: flex-start; }
+  .steps, .stats, .cases, .for-grid { grid-template-columns: repeat(3, 1fr); }
+  .stats, .cases { grid-template-columns: repeat(2, 1fr); }
+  .for-grid { grid-template-columns: repeat(2, 1fr); }
+  .row { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 900px) {
+  .hero-grid { grid-template-columns: 1.25fr .75fr; gap: 64px; }
+  .features { grid-template-columns: 1fr 1fr; }
+  .quals { grid-template-columns: repeat(3, 1fr); }
+  .cta-grid { grid-template-columns: .9fr 1.1fr; gap: 72px; }
+}
+@media (max-width: 767px) {
+  .sticky { display: block; }
+  body { padding-bottom: 76px; }
+  .site-header .btn { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+
+<!-- Proof state: "none" (qualitative only), "stats" (homepage stats), "full" (stats + case studies).
+     Retailer names: "on" or "off". Both need client confirmation before launch (brief, section 6.5). -->
+<body data-proof="stats" data-retailers="on">
+<a class="skip" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="https://www.genesisx.com" aria-label="GenesisX home">
+      <img src="assets/genesisx-logo.png" width="1533" height="194" alt="GenesisX" fetchpriority="high" decoding="async">
+    </a>
+    <a class="btn btn-sm" href="#demo" data-cta>Book a demo</a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- 1. Hero -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">Pay per add to cart advertising for CPG</p>
+        <h1>Pay for the cart. <span>Not the ad.</span></h1>
+        <p class="sub">GenesisX builds retail creative and shoppable stories for CPG brands. You only pay when a shopper adds your product to cart.</p>
+        <div class="hero-cta">
+          <a class="btn" href="#demo" data-cta>Book a demo</a>
+          <a class="link-arrow" href="#how">See how it works</a>
+        </div>
+        <p class="assure">Views and clicks are never billed. Shoppers need no app download.</p>
+      </div>
+
+      <figure class="mock" role="img" aria-label="MOCKUP of an APP&gt;LESS mobile mini-site with a brand video, recipe, coupon and offer tags, and an add to cart button">
+        <div class="phone" aria-hidden="true">
+          <div class="screen">
+            <div class="screen-top">Your Brand <small>Mini-site</small></div>
+            <div class="screen-video"><div class="play"></div></div>
+            <div class="screen-chips"><span>Recipe</span><span>Coupon</span><span>Offer</span></div>
+            <div class="screen-lines"><i></i><i></i><i></i></div>
+            <div class="screen-cta">Add to cart at Retailer A</div>
+          </div>
+        </div>
+        <figcaption class="tag-mock">MOCKUP</figcaption>
+      </figure>
+    </div>
+
+    <ul class="strip" aria-label="What you pay for at each step">
+      <li><span>Shopper sees your story</span><span class="badge free">No charge</span></li>
+      <li><span>Explores recipes, coupons and offers</span><span class="badge free">No charge</span></li>
+      <li><span>Adds to cart</span><span class="badge pay">You pay</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 2. The problem -->
+<section class="dark-2 problem">
+  <div class="wrap">
+    <p class="eyebrow">The problem</p>
+    <h2>Impressions and clicks are not sales.</h2>
+    <div class="lines">
+      <p>Most ad buys charge for impressions or clicks, whether or not anyone buys.</p>
+      <p>Every seasonal tentpole needs fresh content and the right timing, from a team that's already stretched.</p>
+      <p>GenesisX builds the story and the mobile experience that moves shoppers to cart. What you pay follows the add to cart.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3. How it works -->
+<section class="light" id="how">
+  <div class="wrap">
+    <p class="eyebrow">How it works</p>
+    <h2>How pay per add to cart works</h2>
+    <p class="lede">A shopper sees your story on their phone, explores, and adds your product to cart at a retailer. You are billed at the last step only.</p>
+
+    <ol class="steps" style="list-style:none;padding:0;margin-bottom:0">
+      <li class="step">
+        <span class="num">STEP 1</span>
+        <h3>Sees your story</h3>
+        <p>Your brand video and story open on the shopper's phone.</p>
+        <span class="badge free">No charge</span>
+      </li>
+      <li class="step">
+        <span class="num">STEP 2</span>
+        <h3>Explores recipes, coupons and offers</h3>
+        <p>Content built around a shopper solution gives them a reason to buy.</p>
+        <span class="badge free">No charge</span>
+      </li>
+      <li class="step is-pay">
+        <span class="num">STEP 3</span>
+        <h3>Adds to cart</h3>
+        <p>The shopper taps to add your product to cart at a retailer.</p>
+        <span class="badge pay">You pay</span>
+      </li>
+    </ol>
+    <p class="note">
+      <span class="todo">TODO: confirm what counts as an add to cart, and how it is tracked and attributed.</span>
+      <span class="todo">TODO: confirm price per add to cart, minimums, setup fees and contract length.</span>
+    </p>
+  </div>
+</section>
+
+<!-- 4. What you get (heading avoids implying what is in the per-cart price; see brief section 4) -->
+<section class="white">
+  <div class="wrap">
+    <p class="eyebrow">What you get</p>
+    <h2>Built to move shoppers to cart</h2>
+    <ul class="features">
+      <li><span class="tick" aria-hidden="true"></span><div><h3>APP&gt;LESS mobile mini-site</h3><p>No app download for shoppers.</p></div></li>
+      <li><span class="tick" aria-hidden="true"></span><div><h3>Shoppable video</h3><p>Use your own, or GenesisX produces it as part of the campaign.</p></div></li>
+      <li><span class="tick" aria-hidden="true"></span><div><h3>Recipes, coupons and offers</h3><p>Built around a shopper solution.</p></div></li>
+      <li><span class="tick" aria-hidden="true"></span><div><h3>Add to cart at one retailer or several</h3><p>Send shoppers to one retailer, or to several based on targeting.</p></div></li>
+      <li><span class="tick" aria-hidden="true"></span><div><h3>Geo-targeting near the store</h3><p>Reach shoppers by area, down to parking-lot proximity.</p></div></li>
+      <li><span class="tick" aria-hidden="true"></span><div><h3>Versions by message, audience or occasion</h3><p>GenesisX runs the versions and keeps what performs.</p></div></li>
+      <li><span class="tick" aria-hidden="true"></span><div><h3>Measurement that ties engagement to sales</h3><p>See how shopper engagement connects to sales and return on investment.</p></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 5. Proof (swappable component) -->
+<section class="dark proof">
+  <div class="wrap">
+    <p class="eyebrow">Experience</p>
+    <h2>Retail creative, built for retail</h2>
+
+    <!-- State: stats or full -->
+    <div class="proof-stats">
+      <div class="stats">
+        <div class="stat"><b>3,000+</b><span>campaigns</span></div>
+        <div class="stat"><b>4X</b><span>average ROAS</span></div>
+      </div>
+      <p class="note" style="color:var(--muted)">
+        <span class="todo">TODO: confirm both figures and add a source or methodology note before launch.</span>
+      </p>
+    </div>
+
+    <!-- State: full only -->
+    <div class="proof-cases">
+      <div class="cases">
+        <div class="case"><b>$697.7K</b><h3>Butterball at Kroger</h3><p>Attributed cart value on $138,250 in media.</p></div>
+        <div class="case"><b>15%</b><h3>Starbucks at Target</h3><p>Sales lift.</p></div>
+      </div>
+      <p class="note" style="color:var(--muted)">
+        <span class="todo">TODO: confirm exact figures and client permission before publishing.</span>
+      </p>
+    </div>
+
+    <!-- Always shown: qualitative statements -->
+    <ul class="quals">
+      <li>Human-led. Creative directors, designers, copywriters and motion artists refine every concept.</li>
+      <li>Retail-ready creative within days of briefing, with no agency ramp-up.</li>
+      <li>Built to each retailer's format and compliance specs.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 6. Who it's for -->
+<section class="light">
+  <div class="wrap">
+    <p class="eyebrow">Who it's for</p>
+    <h2>Built for enterprise and mid-size CPG brands</h2>
+    <div class="for-grid">
+      <div class="for-card">
+        <h3>Built for</h3>
+        <p>Enterprise and mid-size CPG brands, retail media teams and the agencies that manage them.</p>
+      </div>
+      <div class="for-card">
+        <h3>A managed service</h3>
+        <p>Not a self-serve tool. You bring the brief and brand standards, and GenesisX handles creative execution.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. FAQ -->
+<section class="white">
+  <div class="wrap">
+    <p class="eyebrow">FAQ</p>
+    <h2>Common questions</h2>
+    <div class="faq">
+      <details>
+        <summary>What counts as an add to cart?</summary>
+        <div class="answer"><span class="todo">TODO: add the approved definition, how it is tracked and how it is attributed.</span></div>
+      </details>
+      <details>
+        <summary>Is there a minimum spend or contract?</summary>
+        <div class="answer"><span class="todo">TODO: add the approved answer on minimums, setup fees and contract length.</span></div>
+      </details>
+      <details>
+        <summary>Which retailers do you support?</summary>
+        <div class="answer">
+          <span class="r-on">We build content to the format and compliance specs of retail partners including Walmart, Target, Kroger and Sam's Club.</span>
+          <span class="r-off">We build content to the format and compliance specs of your retail partners.</span>
+        </div>
+      </details>
+      <details>
+        <summary>How fast can we launch?</summary>
+        <div class="answer">Most engagements produce retail-ready creative within days of briefing, with no agency ramp-up.</div>
+      </details>
+      <details>
+        <summary>Do we need our own video?</summary>
+        <div class="answer">No. Use yours, or GenesisX produces it as part of the campaign.</div>
+      </details>
+      <details>
+        <summary>Do shoppers need to download an app?</summary>
+        <div class="answer">No. APP&gt;LESS is a mobile mini-site that opens on the shopper's phone.</div>
+      </details>
+      <details>
+        <summary>Can you work with our current agency?</summary>
+        <div class="answer">Yes. GenesisX can work alongside your agency of record or creative partner.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 8. Final CTA + form -->
+<section class="dark cta" id="demo">
+  <div class="wrap cta-grid">
+    <div>
+      <p class="eyebrow">Book a demo</p>
+      <h2>See how it works for your brand.</h2>
+      <p class="lede">Tell us about your brand and we'll be in touch to set up a time.</p>
+      <p class="contact">Prefer email? <a href="mailto:hello@genesisx.com">hello@genesisx.com</a></p>
+    </div>
+
+    <div class="form-card" id="form-card">
+      <form id="demo-form" novalidate action="#" method="post">
+        <h3>Request a demo</h3>
+
+        <div class="row names">
+          <div class="field">
+            <label for="first_name">First name</label>
+            <input type="text" id="first_name" name="first_name" autocomplete="given-name" autocapitalize="words" enterkeyhint="next" required aria-describedby="first_name-err">
+            <p class="err" id="first_name-err" hidden></p>
+          </div>
+          <div class="field">
+            <label for="last_name">Last name</label>
+            <input type="text" id="last_name" name="last_name" autocomplete="family-name" autocapitalize="words" enterkeyhint="next" required aria-describedby="last_name-err">
+            <p class="err" id="last_name-err" hidden></p>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="email">Work email</label>
+          <input type="email" id="email" name="email" autocomplete="email" inputmode="email" autocapitalize="none" spellcheck="false" enterkeyhint="next" required aria-describedby="email-err email-warn">
+          <p class="err" id="email-err" hidden></p>
+          <p class="warn" id="email-warn" hidden>That looks like a personal address. A work email helps us follow up.</p>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" autocomplete="organization" autocapitalize="words" enterkeyhint="next" required aria-describedby="company-err">
+            <p class="err" id="company-err" hidden></p>
+          </div>
+          <div class="field">
+            <label for="job_title">Job title</label>
+            <input type="text" id="job_title" name="job_title" autocomplete="organization-title" autocapitalize="words" enterkeyhint="done" required aria-describedby="job_title-err">
+            <p class="err" id="job_title-err" hidden></p>
+          </div>
+        </div>
+
+        <fieldset>
+          <legend>Retailers you sell through <span class="opt">(optional)</span></legend>
+          <div class="checks">
+            <label><input type="checkbox" name="retailers" value="Walmart"> Walmart</label>
+            <label><input type="checkbox" name="retailers" value="Target"> Target</label>
+            <label><input type="checkbox" name="retailers" value="Kroger"> Kroger</label>
+            <label><input type="checkbox" name="retailers" value="Sam's Club"> Sam's Club</label>
+            <label><input type="checkbox" name="retailers" value="Dollar General"> Dollar General</label>
+            <label><input type="checkbox" name="retailers" value="Other"> Other</label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label for="message">Message <span class="opt">(optional)</span></label>
+          <textarea id="message" name="message" rows="3"></textarea>
+        </div>
+
+        <!-- Honeypot: real visitors never see or fill this -->
+        <div class="hp" aria-hidden="true">
+          <label for="company_website">Leave this field empty</label>
+          <input type="text" id="company_website" name="company_website" tabindex="-1" autocomplete="off">
+        </div>
+
+        <!-- Attribution, filled from the URL on first load and kept for the session -->
+        <input type="hidden" name="gclid"><input type="hidden" name="gbraid"><input type="hidden" name="wbraid">
+        <input type="hidden" name="utm_source"><input type="hidden" name="utm_medium"><input type="hidden" name="utm_campaign">
+        <input type="hidden" name="utm_term"><input type="hidden" name="utm_content"><input type="hidden" name="landing_page">
+
+        <button type="submit" class="btn btn-block" id="submit-btn">Book a demo</button>
+        <div class="form-error" id="form-error" role="alert" hidden></div>
+        <p class="fine">We'll use your details only to respond to your request. See our <a href="https://www.genesisx.com/privacy/">Privacy Policy &amp; Terms</a>.</p>
+      </form>
+
+      <div class="success" id="success" tabindex="-1" role="status" hidden>
+        <h3>Thanks.</h3>
+        <p>We'll be in touch to set up a time.</p>
+        <p id="preview-note" hidden style="margin-top:14px"><span class="todo">PREVIEW: form is not connected to an endpoint yet, so nothing was sent or tracked.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>&copy; 2026 GenesisX. All rights reserved.</span>
+    <a href="https://www.genesisx.com/privacy/">Privacy Policy &amp; Terms</a>
+    <a href="mailto:hello@genesisx.com">hello@genesisx.com</a>
+  </div>
+</footer>
+
+<div class="sticky" id="sticky"><a class="btn btn-block" href="#demo" data-cta>Book a demo</a></div>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ---------------------------------------------------------------
+     Config. Everything marked TODO must be filled before launch.
+     --------------------------------------------------------------- */
+  var CONFIG = {
+    FORM_ENDPOINT: '',        // TODO: where demo requests are POSTed as JSON (CRM, form service or email relay)
+    GTAG_ID: '',              // TODO: Google tag ID, e.g. 'AW-XXXXXXXXXX' or 'G-XXXXXXXXXX' (skip if the site already loads one or uses GTM)
+    ADS_CONVERSION: '',       // TODO: Google Ads conversion, e.g. 'AW-XXXXXXXXXX/AbCdEfGhIj'
+    LINKEDIN_PARTNER_ID: ''   // TODO: LinkedIn Insight Tag partner ID
+  };
+
+  /* ---------------------------------------------------------------
+     Tracking with Consent Mode v2. Everything starts denied.
+     TODO: call window.gxConsent(true) from the site's cookie banner
+     ("Accept All" or the Customize choices), and window.gxConsent(false) for
+     "Reject Non-Essentials". Until then nothing is stored or sent.
+     --------------------------------------------------------------- */
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { window.dataLayer.push(arguments); }
+  window.gtag = window.gtag || gtag;
+  gtag('consent', 'default', {
+    ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+    analytics_storage: 'denied', wait_for_update: 500
+  });
+  gtag('js', new Date());
+
+  if (CONFIG.GTAG_ID) {
+    var gs = document.createElement('script');
+    gs.async = true;
+    gs.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(CONFIG.GTAG_ID);
+    document.head.appendChild(gs);
+    gtag('config', CONFIG.GTAG_ID);
+  }
+
+  var linkedInLoaded = false;
+  function loadLinkedIn() {
+    if (linkedInLoaded || !CONFIG.LINKEDIN_PARTNER_ID) return;
+    linkedInLoaded = true;
+    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+    window._linkedin_data_partner_ids.push(CONFIG.LINKEDIN_PARTNER_ID);
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://snap.licdn.com/li.lms-analytics/insight.min.js';
+    document.head.appendChild(s);
+  }
+
+  window.gxConsent = function (granted) {
+    var v = granted ? 'granted' : 'denied';
+    gtag('consent', 'update', { ad_storage: v, ad_user_data: v, ad_personalization: v, analytics_storage: v });
+    if (granted) loadLinkedIn();
+  };
+
+  // Fires only after a successful form submission (never on load or on click).
+  function trackLead() {
+    gtag('event', 'generate_lead', { form_id: 'demo_request', page_path: location.pathname });
+    if (CONFIG.ADS_CONVERSION) gtag('event', 'conversion', { send_to: CONFIG.ADS_CONVERSION });
+  }
+
+  /* ---------------------------------------------------------------
+     Attribution: read from the URL on first load, keep for the session.
+     --------------------------------------------------------------- */
+  var form = document.getElementById('demo-form');
+  var KEYS = ['gclid', 'gbraid', 'wbraid', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+  var store = {};
+  try { store = JSON.parse(sessionStorage.getItem('gx_attr') || '{}'); } catch (e) {}
+  var params = new URLSearchParams(location.search);
+  KEYS.forEach(function (k) { if (params.get(k)) store[k] = params.get(k); });
+  if (!store.landing_page) store.landing_page = location.pathname;
+  try { sessionStorage.setItem('gx_attr', JSON.stringify(store)); } catch (e) {}
+  KEYS.concat('landing_page').forEach(function (k) {
+    if (form.elements[k]) form.elements[k].value = store[k] || '';
+  });
+
+  /* ---------------------------------------------------------------
+     Form: validation, work-email warning, submit.
+     --------------------------------------------------------------- */
+  var FREE = ['gmail.com', 'googlemail.com', 'yahoo.com', 'ymail.com', 'outlook.com', 'hotmail.com', 'live.com',
+              'msn.com', 'aol.com', 'icloud.com', 'me.com', 'proton.me', 'protonmail.com', 'gmx.com', 'mail.com'];
+  var REQUIRED = {
+    first_name: 'Enter your first name.',
+    last_name: 'Enter your last name.',
+    email: 'Enter a valid email address.',
+    company: 'Enter your company.',
+    job_title: 'Enter your job title.'
+  };
+  var emailEl = document.getElementById('email');
+  var warnEl = document.getElementById('email-warn');
+
+  function setError(name, msg) {
+    var el = form.elements[name], err = document.getElementById(name + '-err');
+    if (msg) { err.textContent = msg; err.hidden = false; el.setAttribute('aria-invalid', 'true'); }
+    else { err.hidden = true; el.removeAttribute('aria-invalid'); }
+  }
+  function isFreeEmail(v) {
+    var d = (v.split('@')[1] || '').toLowerCase();
+    return FREE.indexOf(d) !== -1;
+  }
+  function updateWarn() { warnEl.hidden = !(emailEl.value && isFreeEmail(emailEl.value.trim())); }
+  emailEl.addEventListener('blur', updateWarn);
+  emailEl.addEventListener('input', function () { if (!warnEl.hidden) updateWarn(); });
+
+  function validate() {
+    var firstBad = null;
+    Object.keys(REQUIRED).forEach(function (name) {
+      var v = form.elements[name].value.trim();
+      var bad = !v || (name === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v));
+      setError(name, bad ? REQUIRED[name] : '');
+      if (bad && !firstBad) firstBad = form.elements[name];
+    });
+    updateWarn();
+    if (firstBad) firstBad.focus();
+    return !firstBad;
+  }
+
+  function payload() {
+    var o = {};
+    ['first_name', 'last_name', 'email', 'company', 'job_title', 'message'].forEach(function (k) { o[k] = form.elements[k].value.trim(); });
+    o.retailers = Array.prototype.map.call(form.querySelectorAll('input[name="retailers"]:checked'), function (c) { return c.value; });
+    KEYS.concat('landing_page').forEach(function (k) { o[k] = form.elements[k].value; });
+    o.submitted_at = new Date().toISOString();
+    return o;
+  }
+
+  function showSuccess(preview) {
+    form.hidden = true;
+    var s = document.getElementById('success');
+    s.hidden = false;
+    document.getElementById('preview-note').hidden = !preview;
+    s.focus();
+  }
+
+  var btn = document.getElementById('submit-btn');
+  var formErr = document.getElementById('form-error');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    formErr.hidden = true;
+    if (!validate()) return;
+
+    // Honeypot filled: act like it worked, send nothing, track nothing.
+    if (form.elements.company_website.value) { showSuccess(false); return; }
+
+    var data = payload();
+
+    // No endpoint yet: preview only. Nothing is sent and no conversion fires.
+    if (!CONFIG.FORM_ENDPOINT) {
+      console.info('[preview] Form not connected. Payload that would be sent:', data);
+      showSuccess(true);
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+    fetch(CONFIG.FORM_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(data)
+    }).then(function (res) {
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      trackLead();            // success only
+      showSuccess(false);
+    }).catch(function () {
+      btn.disabled = false;
+      btn.textContent = 'Book a demo';
+      formErr.textContent = 'Something went wrong and your request was not sent. Please try again, or email hello@genesisx.com.';
+      formErr.hidden = false;
+    });
+  });
+
+  // Clear a field's error as soon as the visitor fixes it.
+  Object.keys(REQUIRED).forEach(function (name) {
+    form.elements[name].addEventListener('input', function () {
+      if (form.elements[name].getAttribute('aria-invalid')) setError(name, '');
+    });
+  });
+
+  /* ---------------------------------------------------------------
+     CTAs: scroll to the form and focus the first field.
+     Sticky mobile bar hides while the form is on screen.
+     --------------------------------------------------------------- */
+  document.querySelectorAll('[data-cta]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      setTimeout(function () {
+        var f = document.getElementById('first_name');
+        if (f && !form.hidden) f.focus({ preventScroll: true });
+      }, 450);
+    });
+  });
+  var sticky = document.getElementById('sticky');
+  var heroSeen = false, formSeen = false;
+  function syncSticky() { sticky.classList.toggle('is-hidden', heroSeen || formSeen); }
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries) {
+      heroSeen = entries[0].isIntersecting; syncSticky();
+    }).observe(document.querySelector('.hero-cta'));
+    new IntersectionObserver(function (entries) {
+      formSeen = entries[0].isIntersecting; syncSticky();
+    }, { threshold: 0.15 }).observe(document.getElementById('demo'));
+  }
+})();
+
+/* ---------------------------------------------------------------
+   Scroll reveal. Only elements below the fold are hidden, so nothing
+   flashes on load. Skipped entirely for reduced motion or old browsers.
+   --------------------------------------------------------------- */
+(function () {
+  'use strict';
+  var root = document.documentElement;
+  try {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
+    var vh = window.innerHeight;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+    var mark = function (selector, stagger) {
+      document.querySelectorAll(selector).forEach(function (el, i) {
+        if (el.getBoundingClientRect().top < vh) return;
+        el.classList.add('reveal');
+        if (stagger) el.style.setProperty('--d', Math.min(i, 5) * 0.09 + 's');
+        io.observe(el);
+      });
+    };
+    ['section:not(.hero) .eyebrow', 'section:not(.hero) h2', 'section:not(.hero) .lede', '.problem .lines p',
+     '.note', '.faq', '.form-card', '.quick', '.contact', '.text-link-row'].forEach(function (s) { mark(s, false); });
+    ['.strip > li', '.steps > li', '.features > li', '.stats > *', '.cases > *', '.quals > li',
+     '.for-grid > *', '.moments > *', '.phones > *'].forEach(function (s) { mark(s, true); });
+  } catch (err) {
+    root.classList.remove('js');   // never leave content hidden if something goes wrong
+  }
+})();
+</script>
+</body>
+</html>
